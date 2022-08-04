@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Problem06 {
+
+	public static void main(String[] args) {
+
+		Scanner sc =  new Scanner(System.in);
+		System.out.println("숫자를 입력하세요");
+		int[] holsu;
+		int temp = sc.nextInt();
+
+		
+		sc.close();
+		
+		
+		
+		
+	}
+
+}
