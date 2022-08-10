@@ -15,9 +15,5 @@ public abstract class Bird implements Soundable{
     public abstract void fly();
     public abstract void showName();
 
-	@Override
-	public String sound() {
-		return null;
-	}
     
 }
