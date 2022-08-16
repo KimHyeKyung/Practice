@@ -1,18 +1,17 @@
 package javaTest.io;
 
 public class Account {
-	
 //-----------------------------------
 //	멤버변수
 //-----------------------------------
 	String accountNum;	//계좌번호
 	String name;		//고객이름
 	String phone;		//전화번호
-	int money;			
-	int balance;		//잔액
+	int money;			//사용자가 입급/출금한 돈
+	int balance;		//총 잔액
 	int inMoney;		//입금된 돈
 	int outMoney;		//출금된 돈
-	int totalMoney;		//거래 후 잔액
+	int totalMoney;		//각각 거래 후 잔액
 	String date;		//날짜
 //-----------------------------------
 //	get/set
@@ -60,11 +59,10 @@ public class Account {
 //----------------------------------
 //	생성자
 //-----------------------------------
-
 	public Account(String line) {
-		// TODO Auto-generated constructor stub
+		this.accountNum = line;
 	}
-
+	
 	public Account(String accountNum, String name, String phone) {
 		this.accountNum = accountNum;
 		this.name = name;
@@ -82,17 +80,16 @@ public class Account {
 	public Account(String date, int inMoney, int outMoney, int totalMoney) {
 		this.date = date;
 		this.inMoney = inMoney;
-		this.inMoney = outMoney;
-		this.balance = totalMoney;
+		this.outMoney = outMoney;
+		this.totalMoney = totalMoney;
 	}
 	
-
 //----------------------------------
 //	메서드
 //-----------------------------------
 	//계좌번호 조회
-	public Object accountNo() {
-		return null;
+	public String accountNo() {
+		return accountNum;
 	}
 
 	//입금
@@ -118,9 +115,8 @@ public class Account {
 
 	// 날짜 비교해서 거래내역 출력
 	public void checkAccount() {
-		System.out.println("this.date" + this.inMoney+ this.outMoney + this.totalMoney);
+		System.out.println(this.date + "\t\t" + this.inMoney+"\t"+ this.outMoney +"\t" + this.totalMoney);
 	}
-
-
+	
 	
 }
